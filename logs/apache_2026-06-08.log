@@ -1,0 +1,18 @@
+[2026-06-08 22:28:12] ==========================================
+[2026-06-08 22:28:12] INSTALAÇÃO DO APACHE - Hospital DC
+[2026-06-08 22:28:12] ==========================================
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apache2 is already the newest version (2.4.52-1ubuntu4.21).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[2026-06-08 22:28:12] [OK] Apache2 instalado com sucesso.
+ * Starting Apache httpd web server apache2
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.2. Set the 'ServerName' directive globally to suppress this message
+ * 
+[2026-06-08 22:28:14] Tentativa de inicialização do Apache registrada.
+[2026-06-08 22:28:14] [OK] Apache2 está instalado no sistema.
+[2026-06-08 22:28:14] [OK] Processo Apache2 em execução.
+Server version: Apache/2.4.52 (Ubuntu)
+Server built:   2026-06-03T15:42:24
+[2026-06-08 22:28:14] Consulta de versão do Apache realizada.

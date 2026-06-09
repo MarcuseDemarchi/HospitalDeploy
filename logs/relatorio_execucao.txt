@@ -1,0 +1,136 @@
+=============================================================
+  RELATÓRIO OPERACIONAL - HOSPITAL DC
+  Projeto: Trabalho 03 - Linux, Shell Script e Cloud Computing
+  Aluno: Marcuse Demarchi
+  Tema: Hospital DC - Gerenciamento Hospitalar em Cloud
+  Instituição: Unidavi
+  Data/Hora de Geração: 2026-06-08 23:30:04
+=============================================================
+
+─────────────────────────────────────────────────────────────
+ 1. INFORMAÇÕES DO SISTEMA
+─────────────────────────────────────────────────────────────
+Hostname: 34bc9cf902fe
+Sistema Operacional: Ubuntu 22.04.5 LTS
+Kernel: 6.17.9-76061709-generic
+Uptime: up 2 hours, 7 minutes
+Data/Hora atual: Mon Jun  8 23:30:04 UTC 2026
+
+─────────────────────────────────────────────────────────────
+ 2. USO DE DISCO
+─────────────────────────────────────────────────────────────
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         460G   30G  407G   7% /
+tmpfs            64M     0   64M   0% /dev
+shm              64M     0   64M   0% /dev/shm
+/dev/nvme0n1p3  460G   30G  407G   7% /app/logs
+tmpfs           3.8G     0  3.8G   0% /proc/acpi
+tmpfs           3.8G     0  3.8G   0% /proc/asound
+tmpfs           3.8G     0  3.8G   0% /proc/scsi
+tmpfs           3.8G     0  3.8G   0% /sys/devices/virtual/powercap
+tmpfs           3.8G     0  3.8G   0% /sys/firmware
+tmpfs           3.8G     0  3.8G   0% /sys/devices/system/cpu/cpu0/thermal_throttle
+
+─────────────────────────────────────────────────────────────
+ 3. USO DE MEMÓRIA
+─────────────────────────────────────────────────────────────
+               total        used        free      shared  buff/cache   available
+Mem:           7.5Gi       4.3Gi       376Mi       1.1Gi       2.8Gi       1.5Gi
+Swap:           11Gi       3.1Gi       8.5Gi
+
+─────────────────────────────────────────────────────────────
+ 4. USO DOS DIRETÓRIOS DO HOSPITAL DC
+─────────────────────────────────────────────────────────────
+4.0K	/app/hospital/backups
+4.0K	/app/hospital/cirurgias
+8.0K	/app/hospital/consultas
+4.0K	/app/hospital/emergencia
+8.0K	/app/hospital/exames
+4.0K	/app/hospital/financeiro
+4.0K	/app/hospital/funcionarios
+4.0K	/app/hospital/internacoes
+4.0K	/app/hospital/logs
+4.0K	/app/hospital/medicamentos
+8.0K	/app/hospital/pacientes
+8.0K	/app/hospital/prontuarios
+4.0K	/app/hospital/relatorios
+
+─────────────────────────────────────────────────────────────
+ 5. STATUS DO APACHE (Portal Hospital DC)
+─────────────────────────────────────────────────────────────
+[OK] Apache2 está em EXECUÇÃO.
+Portal disponível em: http://localhost:8080
+
+─────────────────────────────────────────────────────────────
+ 6. ÚLTIMOS BACKUPS
+─────────────────────────────────────────────────────────────
+-rw-r--r-- 1 root root 752 Jun  8 22:41 /app/backups/backup_hospital_2026-06-08_22-41.tar.gz
+
+─────────────────────────────────────────────────────────────
+ 7. ÚLTIMOS LOGS GERADOS
+─────────────────────────────────────────────────────────────
+-rw-r--r-- 1 root root 1.3K Jun  8 23:28 /app/logs/usuarios_2026-06-08.log
+-rw-r--r-- 1 root root  249 Jun  8 23:27 /app/logs/processos_2026-06-08.log
+-rw-r--r-- 1 root root  423 Jun  8 22:44 /app/logs/deploy_2026-06-08.log
+-rw-r--r-- 1 root root  546 Jun  8 22:41 /app/logs/backup_2026-06-08.log
+-rw-r--r-- 1 root root 1.4K Jun  8 22:36 /app/logs/estrutura_2026-06-08.log
+-rw-r--r-- 1 root root 7.3K Jun  8 22:28 /app/logs/update_2026-06-08.log
+-rw-r--r-- 1 root root 1005 Jun  8 22:28 /app/logs/apache_2026-06-08.log
+
+─────────────────────────────────────────────────────────────
+ 8. ARQUIVOS PUBLICADOS NO APACHE
+─────────────────────────────────────────────────────────────
+total 0
+
+─────────────────────────────────────────────────────────────
+ 9. USUÁRIOS DO SISTEMA (Hospital DC)
+─────────────────────────────────────────────────────────────
+medico_user:x:999:1001::/home/medico_user:/bin/bash
+ti_user:x:998:1004::/home/ti_user:/bin/bash
+recepcao_user:x:997:1003::/home/recepcao_user:/bin/bash
+enfermeiro_user:x:996:1002::/home/enfermeiro_user:/bin/bash
+
+─────────────────────────────────────────────────────────────
+ 10. GRUPOS DO SISTEMA (Hospital DC)
+─────────────────────────────────────────────────────────────
+hospital_ops:x:1000:
+medicos:x:1001:
+enfermagem:x:1002:
+recepcao:x:1003:
+ti_hospital:x:1004:
+
+─────────────────────────────────────────────────────────────
+ 11. PERMISSÕES NOS DIRETÓRIOS PRINCIPAIS
+─────────────────────────────────────────────────────────────
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/backups
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/cirurgias
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/consultas
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/emergencia
+drwxr-x--- 2 root medicos      4096 Jun  8 22:36 /app/hospital/exames
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/financeiro
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/funcionarios
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/internacoes
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/logs
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/medicamentos
+drwxr-xr-x 2 root hospital_ops 4096 Jun  8 22:36 /app/hospital/pacientes
+drwxr-x--- 2 root medicos      4096 Jun  8 22:36 /app/hospital/prontuarios
+drwxr-xr-x 2 root root         4096 Jun  8 22:36 /app/hospital/relatorios
+
+─────────────────────────────────────────────────────────────
+ 12. PROCESSOS ATIVOS (Top 10 por CPU)
+─────────────────────────────────────────────────────────────
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   4504  3796 pts/0    SNs+ 22:24   0:00 bash
+root           9  0.0  0.0   4636  3792 pts/1    SNs  22:27   0:00 bash
+root          65  0.0  0.0   6788  4764 ?        SNs  22:28   0:00 /usr/sbin/apache2 -k start
+www-data      68  0.0  0.0 1997888 4408 ?        SNl  22:28   0:00 /usr/sbin/apache2 -k start
+www-data      69  0.0  0.0 1997960 5708 ?        SNl  22:28   0:00 /usr/sbin/apache2 -k start
+root         804  0.0  0.0   4504  3688 pts/1    SN+  23:30   0:00 /bin/bash ./09_relatorio.sh
+root         806  0.0  0.0   4636  2128 pts/1    SN+  23:30   0:00 /bin/bash ./09_relatorio.sh
+root         837  0.0  0.0   4636  1876 pts/1    SN+  23:30   0:00 /bin/bash ./09_relatorio.sh
+root         838  0.0  0.0   7072  2976 pts/1    RN+  23:30   0:00 ps aux --sort=-%cpu
+root         839  0.0  0.0   2812  1296 pts/1    SN+  23:30   0:00 head -11
+
+=============================================================
+  FIM DO RELATÓRIO - 2026-06-08 23:30:04
+=============================================================

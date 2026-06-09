@@ -1,0 +1,18 @@
+[2026-06-08 23:28:13] ==========================================
+[2026-06-08 23:28:13] CONFIGURAÇÃO DE USUÁRIOS E GRUPOS - Hospital DC
+[2026-06-08 23:28:13] ==========================================
+[2026-06-08 23:28:13] [OK] Grupo criado: hospital_ops
+[2026-06-08 23:28:13] [OK] Grupo criado: medicos
+[2026-06-08 23:28:13] [OK] Grupo criado: enfermagem
+[2026-06-08 23:28:13] [OK] Grupo criado: recepcao
+[2026-06-08 23:28:13] [OK] Grupo criado: ti_hospital
+[2026-06-08 23:28:13] [OK] Usuário criado: medico_user (grupo: medicos)
+[2026-06-08 23:28:13] [OK] Usuário criado: ti_user (grupo: ti_hospital)
+[2026-06-08 23:28:13] [OK] Usuário criado: recepcao_user (grupo: recepcao)
+[2026-06-08 23:28:13] [OK] Usuário criado: enfermeiro_user (grupo: enfermagem)
+[2026-06-08 23:28:13] [OK] Permissão 750 aplicada em /app/hospital/prontuarios (restrito a médicos)
+[2026-06-08 23:28:13] [OK] Permissão 755 aplicada em /app/hospital/pacientes
+[2026-06-08 23:28:13] [OK] Permissão 750 aplicada em /app/hospital/exames
+[2026-06-08 23:28:13] [OK] Permissão 755 aplicada em /app/hospital/logs
+[2026-06-08 23:28:13] [OK] Permissão 755 aplicada em /app/hospital/consultas
+[2026-06-08 23:28:13] Permissões aplicadas com sucesso. chmod 777 NÃO utilizado por questões de segurança.

@@ -1,0 +1,6 @@
+[2026-06-08 22:44:14] [OK] Diretório /var/www/html limpo.
+[2026-06-08 22:44:14] ==========================================
+[2026-06-08 22:44:14] INICIANDO DEPLOY - Hospital DC
+[2026-06-08 22:44:14] ==========================================
+[2026-06-08 22:44:14] [AVISO] Pasta source não encontrada em /app/source. Usando /var/www/html da imagem.
+[2026-06-08 22:44:14] [ERRO] index.html não encontrado em /var/www/html.

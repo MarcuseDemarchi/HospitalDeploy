@@ -1,0 +1,8 @@
+[2026-06-08 22:41:43] ==========================================
+[2026-06-08 22:41:43] INICIANDO BACKUP - Hospital DC
+[2026-06-08 22:41:43] ==========================================
+[2026-06-08 22:41:43] Origem: /app/hospital
+[2026-06-08 22:41:43] Destino: /app/backups/backup_hospital_2026-06-08_22-41.tar.gz
+tar: Removing leading `/' from member names
+[2026-06-08 22:41:43] [OK] Backup criado: backup_hospital_2026-06-08_22-41.tar.gz
+[2026-06-08 22:41:43] [OK] Backup validado. Arquivo: backup_hospital_2026-06-08_22-41.tar.gz | Tamanho: 4.0K

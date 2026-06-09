@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Hospital DC</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; color: #2d3748; }
+
+        header {
+            background: linear-gradient(135deg, #1a3a6e 0%, #2563a8 100%);
+            color: white;
+            padding: 0;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 48px;
+        }
+
+        .logo { display: flex; align-items: center; gap: 16px; }
+        .logo-icon { font-size: 48px; }
+        .logo h1 { font-size: 28px; font-weight: 700; }
+        .logo p { font-size: 13px; opacity: 0.85; }
+
+        nav { background: rgba(0,0,0,0.25); display: flex; }
+        nav a {
+            color: white; text-decoration: none; padding: 14px 28px;
+            font-size: 14px; font-weight: 500; transition: background 0.2s;
+        }
+        nav a:hover, nav a.active { background: rgba(255,255,255,0.15); }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a3a6e, #2563a8);
+            color: white;
+            padding: 56px 48px;
+            text-align: center;
+        }
+        .page-hero h2 { font-size: 32px; margin-bottom: 12px; }
+        .page-hero p { font-size: 16px; opacity: 0.9; }
+
+        .section { padding: 56px 48px; max-width: 1100px; margin: 0 auto; }
+
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+
+        .sobre-texto h3 { font-size: 24px; color: #1a3a6e; margin-bottom: 16px; }
+        .sobre-texto p { color: #4a5568; line-height: 1.8; margin-bottom: 12px; }
+
+        .sobre-stats {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .stat-item:last-child { border-bottom: none; }
+        .stat-icon { font-size: 28px; }
+        .stat-info strong { color: #1a3a6e; font-size: 20px; }
+        .stat-info p { color: #718096; font-size: 14px; }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .valor-card {
+            background: white;
+            border-radius: 10px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            border-top: 4px solid #38a169;
+        }
+        .valor-card .icon { font-size: 36px; margin-bottom: 12px; }
+        .valor-card h4 { color: #1a3a6e; margin-bottom: 8px; font-size: 16px; }
+        .valor-card p { color: #718096; font-size: 14px; line-height: 1.6; }
+
+        .cloud-box {
+            background: #ebf8ff;
+            border: 1px solid #bee3f8;
+            border-radius: 10px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .cloud-box h3 { color: #2b6cb0; margin-bottom: 12px; }
+        .cloud-box p { color: #2c5282; font-size: 14px; line-height: 1.8; margin-bottom: 8px; }
+        .cloud-box code {
+            background: #bee3f8;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+
+        .section-title { margin-bottom: 40px; }
+        .section-title h2 { font-size: 26px; color: #1a3a6e; margin-bottom: 8px; }
+        .section-title p { color: #718096; }
+
+        footer {
+            background: #1a202c;
+            color: #a0aec0;
+            padding: 32px 48px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .sobre-grid { grid-template-columns: 1fr; }
+            .section { padding: 40px 24px; }
+            .header-top { flex-direction: column; gap: 12px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <div class="logo-icon">🏥</div>
+                <div>
+                    <h1>Hospital DC</h1>
+                    <p>Cuidando de Quem Importa</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html" class="active">Sobre</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#especialidades">Especialidades</a>
+        </nav>
+    </header>
+
+    <div class="page-hero">
+        <h2>Sobre o Hospital DC</h2>
+        <p>Nossa história, missão, visão e compromisso com a saúde da comunidade</p>
+    </div>
+
+    <div class="section">
+
+        <!-- SOBRE -->
+        <div class="sobre-grid">
+            <div class="sobre-texto">
+                <h3>Nossa História</h3>
+                <p>O Hospital DC foi fundado em 2000 com o objetivo de oferecer atendimento médico de excelência à população de Rio do Sul e região do Alto Vale do Itajaí, em Santa Catarina.</p>
+                <p>Ao longo de mais de 25 anos, crescemos e nos modernizamos, sempre com foco em tecnologia, humanização e qualidade no atendimento. Hoje somos referência regional em diversas especialidades médicas.</p>
+                <p>Com infraestrutura de ponta e equipe altamente qualificada, o Hospital DC atende emergências, realiza cirurgias complexas, oferece internação, exames e consultas em mais de 30 especialidades.</p>
+            </div>
+            <div class="sobre-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-info">
+                        <strong>+25 anos</strong>
+                        <p>Fundado em 2000</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">👨‍⚕️</div>
+                    <div class="stat-info">
+                        <strong>150+ médicos</strong>
+                        <p>Especialistas e residentes</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🛏️</div>
+                    <div class="stat-info">
+                        <strong>300 leitos</strong>
+                        <p>UTI, enfermaria e particulares</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <strong>Acreditação ONA</strong>
+                        <p>Nível 2 de qualidade hospitalar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MISSÃO VISÃO VALORES -->
+        <div class="section-title">
+            <h2>Missão, Visão e Valores</h2>
+            <p>Os pilares que guiam o Hospital DC</p>
+        </div>
+
+        <div class="valores-grid">
+            <div class="valor-card">
+                <div class="icon">🎯</div>
+                <h4>Missão</h4>
+                <p>Promover saúde integral com excelência, humanização e tecnologia, garantindo a qualidade de vida da comunidade.</p>
+            </div>
+            <div class="valor-card">
+                <div class="icon">🔭</div>
+                <h4>Visão</h4>
+                <p>Ser referência em saúde no sul do Brasil, reconhecido pela qualidade, inovação e compromisso com os pacientes.</p>
+            </div>
+            <div class="valor-card">
+                <div class="icon">💎</div>
+                <h4>Valores</h4>
+                <p>Ética, humanização, excelência técnica, comprometimento, transparência e responsabilidade social.</p>
+            </div>
+        </div>
+
+        <!-- CLOUD BOX -->
+        <div class="cloud-box">
+            <h3>☁️ Infraestrutura Cloud — Trabalho 03</h3>
+            <p>Este portal faz parte do <strong>Trabalho 03 de Cloud Computing</strong>, disciplina do curso de Sistemas de Informação da Unidavi. O ambiente foi montado utilizando:</p>
+            <p>🐳 <strong>Docker:</strong> Container <code>trabalho03-linux</code> com Ubuntu 22.04</p>
+            <p>🌐 <strong>Apache2:</strong> Servidor web servindo este portal na porta <code>8080</code></p>
+            <p>📜 <strong>Shell Scripts:</strong> 9 scripts + menu interativo automatizando toda a operação</p>
+            <p>👤 <strong>Aluno:</strong> Marcuse Demarchi | <strong>Tema:</strong> Hospital DC | <strong>Instituição:</strong> Unidavi</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Hospital DC — Trabalho 03 | Cloud Computing | Marcuse Demarchi | Unidavi</p>
+        <p style="margin-top:8px">📞 (47) 3333-4444 | 📧 contato@hospitaldc.com.br | 📍 Rio do Sul — SC</p>
+    </footer>
+
+</body>
+</html>

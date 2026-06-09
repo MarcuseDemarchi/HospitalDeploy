@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital DC - Cuidando de Quem Importa</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            color: #2d3748;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #1a3a6e 0%, #2563a8 100%);
+            color: white;
+            padding: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 48px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-icon {
+            font-size: 48px;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo p {
+            font-size: 13px;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        .header-contact {
+            text-align: right;
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        nav {
+            background: rgba(0,0,0,0.25);
+            display: flex;
+            gap: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover, nav a.active {
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1a3a6e 0%, #2563a8 60%, #38a169 100%);
+            color: white;
+            text-align: center;
+            padding: 72px 48px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+        }
+
+        .btn-hero {
+            background: #38a169;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        .btn-hero:hover { background: #2f855a; }
+
+        .btn-hero-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 14px 36px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.2s;
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        .btn-hero-outline:hover { background: white; color: #1a3a6e; }
+
+        /* EMERGÊNCIA */
+        .emergencia-bar {
+            background: #e53e3e;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        /* SERVIÇOS */
+        .section {
+            padding: 64px 48px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            color: #1a3a6e;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #718096;
+            font-size: 16px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid #2563a8;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+        }
+
+        .card-icon { font-size: 44px; margin-bottom: 16px; }
+        .card h3 { font-size: 18px; color: #1a3a6e; margin-bottom: 10px; }
+        .card p { color: #718096; font-size: 14px; line-height: 1.6; }
+
+        /* NÚMEROS */
+        .numeros {
+            background: #1a3a6e;
+            color: white;
+            padding: 56px 48px;
+        }
+
+        .numeros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .numero-item .valor {
+            font-size: 42px;
+            font-weight: 700;
+            color: #68d391;
+        }
+
+        .numero-item .label {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-top: 4px;
+        }
+
+        /* ESPECIALIDADES */
+        .especialidades {
+            background: white;
+        }
+
+        .esp-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .esp-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            background: #f0f4f8;
+            border-radius: 8px;
+            border-left: 4px solid #38a169;
+        }
+
+        .esp-item span { font-size: 24px; }
+        .esp-item p { font-size: 14px; font-weight: 500; color: #2d3748; }
+
+        /* AGENDAMENTO */
+        .agendamento {
+            background: linear-gradient(135deg, #38a169, #2563a8);
+            color: white;
+            text-align: center;
+            padding: 64px 48px;
+        }
+
+        .agendamento h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .agendamento p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 28px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a202c;
+            color: #a0aec0;
+            padding: 40px 48px 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 13px;
+            line-height: 1.9;
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+        }
+
+        .footer-section a:hover { color: white; }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* CLOUD INFO */
+        .cloud-info {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 16px 24px;
+            margin: 24px 48px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #2c5282;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <div class="logo-icon">🏥</div>
+                <div>
+                    <h1>Hospital DC</h1>
+                    <p>Cuidando de Quem Importa</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <p>📞 (47) 3333-4444 | Emergência: 192</p>
+                <p>📍 Rio do Sul, Santa Catarina</p>
+                <p>🕐 Atendimento 24h</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#agendamento">Agendamento</a>
+        </nav>
+    </header>
+
+    <!-- BARRA DE EMERGÊNCIA -->
+    <div class="emergencia-bar">
+        🚨 EMERGÊNCIA 24H — Ligue 192 ou dirija-se à UPA — Unidade de Pronto Atendimento aberta ininterruptamente
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Saúde e Tecnologia ao Seu Serviço</h2>
+        <p>O Hospital DC oferece atendimento humanizado, tecnologia de ponta e uma equipe dedicada ao bem-estar dos nossos pacientes.</p>
+        <a href="#agendamento" class="btn-hero">Agendar Consulta</a>
+        <a href="sobre.html" class="btn-hero-outline">Conheça o Hospital</a>
+    </section>
+
+    <!-- INFO CLOUD -->
+    <div class="cloud-info">
+        ☁️ <strong>Trabalho 03 — Cloud Computing:</strong> Este portal está sendo executado em um container Docker com Ubuntu Server, servido pelo Apache2, como parte de uma simulação de ambiente cloud hospitalar. Projeto acadêmico de Marcuse Demarchi — Unidavi.
+    </div>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+        <div class="section-title">
+            <h2>Nossos Serviços</h2>
+            <p>Atendimento completo para todas as necessidades de saúde</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🩺</div>
+                <h3>Consultas Médicas</h3>
+                <p>Equipe multidisciplinar com especialistas em diversas áreas da medicina.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔬</div>
+                <h3>Laboratório</h3>
+                <p>Exames laboratoriais com resultados rápidos e alta precisão diagnóstica.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏨</div>
+                <h3>Internação</h3>
+                <p>Quartos individuais e coletivos com conforto e monitoramento 24 horas.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚑</div>
+                <h3>Pronto-Socorro</h3>
+                <p>Atendimento de urgência e emergência disponível todos os dias, 24 horas.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🩻</div>
+                <h3>Imagem</h3>
+                <p>Raio-X, ultrassonografia, tomografia e ressonância magnética.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💊</div>
+                <h3>Farmácia</h3>
+                <p>Farmácia hospitalar com manipulação e dispensação de medicamentos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <div class="numeros">
+        <div class="numeros-grid">
+            <div class="numero-item">
+                <div class="valor">+25</div>
+                <div class="label">Anos de Experiência</div>
+            </div>
+            <div class="numero-item">
+                <div class="valor">150+</div>
+                <div class="label">Médicos Especialistas</div>
+            </div>
+            <div class="numero-item">
+                <div class="valor">300</div>
+                <div class="label">Leitos Disponíveis</div>
+            </div>
+            <div class="numero-item">
+                <div class="valor">50k+</div>
+                <div class="label">Pacientes por Ano</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESPECIALIDADES -->
+    <section class="section especialidades" id="especialidades">
+        <div class="section-title">
+            <h2>Especialidades Médicas</h2>
+            <p>Cobertura completa em diversas áreas da saúde</p>
+        </div>
+        <div class="esp-list">
+            <div class="esp-item"><span>❤️</span><p>Cardiologia</p></div>
+            <div class="esp-item"><span>🧠</span><p>Neurologia</p></div>
+            <div class="esp-item"><span>🦴</span><p>Ortopedia</p></div>
+            <div class="esp-item"><span>👶</span><p>Pediatria</p></div>
+            <div class="esp-item"><span>🤰</span><p>Obstetrícia</p></div>
+            <div class="esp-item"><span>👁️</span><p>Oftalmologia</p></div>
+            <div class="esp-item"><span>🦷</span><p>Odontologia</p></div>
+            <div class="esp-item"><span>🫁</span><p>Pneumologia</p></div>
+            <div class="esp-item"><span>🩹</span><p>Cirurgia Geral</p></div>
+            <div class="esp-item"><span>🧬</span><p>Oncologia</p></div>
+            <div class="esp-item"><span>💉</span><p>Endocrinologia</p></div>
+            <div class="esp-item"><span>🦻</span><p>Otorrinolaringologia</p></div>
+        </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section class="agendamento" id="agendamento">
+        <h2>Agende sua Consulta</h2>
+        <p>Atendimento presencial ou por telemedicina. Escolha o horário mais conveniente para você.</p>
+        <a href="tel:4733334444" class="btn-hero">📞 Ligar Agora</a>
+        <a href="sobre.html" class="btn-hero-outline">Saiba Mais</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>🏥 Hospital DC</h4>
+                <p>Comprometidos com a saúde e o bem-estar da nossa comunidade há mais de 25 anos.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contatos</h4>
+                <p>📞 (47) 3333-4444</p>
+                <p>📧 contato@hospitaldc.com.br</p>
+                <p>🚨 Emergência: 192</p>
+            </div>
+            <div class="footer-section">
+                <h4>Endereço</h4>
+                <p>Rua da Saúde, 100</p>
+                <p>Rio do Sul — SC</p>
+                <p>CEP: 89160-000</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#especialidades">Especialidades</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Hospital DC — Trabalho 03 | Cloud Computing | Marcuse Demarchi | Unidavi</p>
+        </div>
+    </footer>
+
+</body>
+</html>

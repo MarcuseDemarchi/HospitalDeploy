@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  hospital-dc:
+    build: .
+    container_name: trabalho03-linux
+    ports:
+      - "8080:80"
+    volumes:
+      - ./logs:/app/logs
+      - ./backups:/app/backups
+      - ./evidencias:/app/evidencias
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
