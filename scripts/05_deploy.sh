@@ -7,7 +7,6 @@
 # Descrição: Realiza o deploy do site estático do Hospital DC
 #            para o diretório do Apache /var/www/html.
 # =============================================================
-
 ORIGEM="/app/source"
 DESTINO="/var/www/html"
 LOG_DIR="/app/logs"

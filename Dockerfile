@@ -26,11 +26,8 @@ RUN mkdir -p /app/hospital/pacientes \
     && mkdir -p /app/logs \
     && mkdir -p /app/backups
 
-# Copia os scripts para dentro do container
 COPY scripts/ /app/scripts/
-
-# Copia o site estático para o Apache
-COPY source/ /var/www/html/
+COPY source/ /app/source/
 
 # Dá permissão de execução em todos os scripts
 RUN chmod +x /app/scripts/*.sh
