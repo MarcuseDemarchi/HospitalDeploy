@@ -10,6 +10,7 @@ services:
       - ./logs:/app/logs
       - ./backups:/app/backups
       - ./evidencias:/app/evidencias
+      - ./source:/app/source  
     stdin_open: true
     tty: true
     restart: unless-stopped
